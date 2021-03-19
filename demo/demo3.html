@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>=^.^=</title>
+</head>
+<body>
+
+<script type="module">
+import { css } from 'https://cdn.jsdelivr.net/npm/goober@2.0.33/dist/goober.esm.js';
+
+const myClassName = css`
+  font-size: 20px;
+
+  &:hover {
+    color: red;
+  }
+
+  &:before {
+    content: 'ビフォア疑似要素';
+    display: block;
+  }
+`;
+
+const $div = document.createElement( 'div' );
+$div.classList.add( myClassName );
+$div.innerHTML = 'hover me';
+document.body.appendChild( $div );
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>=^.^=</title>
+</head>
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/goober@2.0.33/dist/goober.umd.js"></script>
+<script>
+const css = goober.css;
+
+const myClassName = css`
+  font-size: 20px;
+  color: red;
+`;
+
+const myDiv = document.createElement( 'div' );
+myDiv.innerHTML = 'こんにちは';
+myDiv.classList.add( myClassName ); // goober に生成された文字列を div のクラスに適用
+
+document.body.appendChild( myDiv );
+</script>
+
+</body>
+</html>
