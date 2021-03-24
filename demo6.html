@@ -9,16 +9,20 @@
 
 <script type="module">
 import { css } from 'https://cdn.jsdelivr.net/npm/goober@2.0.33/dist/goober.esm.js';
-
 const FONT_SIZE_L = '32px';
 const MEDIA_SMALL = '@media ( max-width: 680px )';
+const mixinCircle = ( size ) => `
+  width: ${ size }px;
+  height: ${ size }px;
+  border-radius: ${ size / 2 }px;
+`;
 
 const myClassName = css`
+  ${ mixinCircle( 100 ) },
   font-size: ${ FONT_SIZE_L };
-  color: red;
-
+  background: red;
   ${ MEDIA_SMALL } {
-    color: blue;
+    background: blue;
   }
 `;
 
